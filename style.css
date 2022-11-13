@@ -1,102 +1,121 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@1&display=swap');
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Bodoni Moda', serif;
-    
-}
-body{
+:root {
+    --bg: #1a1e2d;
+    --green: #a5ea9b;
+    --pink: #ff61d8;
+    --blue: #569cfa;
+    --orange: #ffcc81;
+    --cyan: #7ed1e2;
+  }
+  
+  body {
     height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(img/giphy.gif.gif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-color: rgb(226, 43, 150);
-}
-.container{
-    perspective: 1000px;
-}
-.card{
-    width: 280px;
-    height: 360px;
+    width: 100vw;
+    background: var(--bg);
+    display: flex;
+    place-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+  
+  .container {
+    width: 80vw;
+    height: 80vh;
+  }
+  .container svg {
+    height: 100%;
+    width: 100%;
+    overflow: visible;
+  }
+  
+  #bongo-cat {
+    fill: var(--bg);
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 4;
+  }
+  #bongo-cat .laptop-cover,
+  #bongo-cat .headphone .band {
+    fill: none;
+  }
+  #bongo-cat .paw, #bongo-cat .head {
+    stroke: var(--orange);
+  }
+  #bongo-cat .laptop-keyboard {
+    stroke-width: 2;
+  }
+  #bongo-cat .terminal-code {
+    stroke-width: 5;
+  }
+  #bongo-cat .music .note,
+  #bongo-cat .laptop-base,
+  #bongo-cat .laptop-cover,
+  #bongo-cat .paw .pads {
+    stroke: var(--pink);
+  }
+  #bongo-cat .table line,
+  #bongo-cat .headphone .band,
+  #bongo-cat .headphone .speaker path:nth-child(3) {
+    stroke: var(--green);
+  }
+  #bongo-cat .terminal-frame,
+  #bongo-cat .laptop-keyboard,
+  #bongo-cat .headphone .speaker path:nth-child(2) {
+    stroke: var(--blue);
+  }
+  #bongo-cat .terminal-code,
+  #bongo-cat .headphone .speaker path:first-child {
+    stroke: var(--cyan);
+  }
+  
+  /* Countdown */
+  
+  @import url('https://fonts.googleapis.com/css?family=Major+Mono+Display');
+  .holder {
     position: absolute;
-    top: 100px;
-    left: 230px;
-    transition: 2s;
-    transform-style: preserve-3d;
-}
-.card:hover{
-    transform: rotateY(180deg);
-}
-.block{
-    position: absolute;
-    top:200px;
-    right: 600px;
-    perspective: 800px;
-}
-.outside,.inside{
+    background-color: transparent;
+    left: 0%;
+    top: 0%;
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+  }
+  .new-year {
+    font-family: 'Major Mono Display', monospace;
+    color: red;
+    font-size: 20px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    width: 100%;
+    transform: translateX(-50%) translateY(-50%);
     text-align: center;
-    padding: 1.5rem;
-}
-.outside{
-    background-color: blanchedalmond;
-    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
-    position: absolute;
-    backface-visibility: hidden;
-}
-.outside h1{
-    font-size: 3rem;
-    font-weight: bold;
-    color: salmon;
-    margin-bottom: 30px;
-}
-.inside{
-    background-color: rgb(255, 244, 79);
-    box-shadow: inset 0 5px 10px rgba(0,0,0,0.5);
-    transform: rotateY(180deg);
-}
-.inside h3{
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 20px;
-}
-.frames{
-    width: 400px;
-    height: 150px;
-    box-shadow: 0 5px 10px rgba(255, 255, 255, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 0 0.8rem;
-
-    transform: rotateY(-230deg) rotateX(20deg);
-    position: absolute;
-}
-.frames img{
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
-}
-.frames p{
-   font-size: 20px;
-   font-weight: bold;
-   transform: rotateY(180deg);
-}
-.frames:nth-child(1)
-{
-    top:-110px;
-    z-index: -1;
-    background-color: coral;
-}
-.frames:nth-child(2){
-    background-color: goldenrod;
-}
-.frames:nth-child(3)
-{
-    top:100px;
-    background-color: burlywood;
-}
+  }
+  .year {
+    position: relative;
+    left: 50%;
+    display: table;
+    font-size: 6em;
+    transform: translateX(-50%);
+  }
+  .digit {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    opacity: 0;
+  }
+  .controls {
+    margin-top: 30px;
+  }
+  .control {
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 0.8em;
+    border-left: 1px solid red;
+    opacity: 0;
+    position: relative;
+    top: 100px;
+  }
+  .control:first-child {
+    border-left: none;
+  }
