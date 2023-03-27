@@ -1,0 +1,32 @@
+body
+{
+    background-image: url(background_trangchu.jpg);
+}
+.table1
+{
+    background: rgba(0,0,0,0.1);
+    width: 50%;
+    text-align: center;
+}
+
+th
+{
+    color: white;
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 0 0 3px, 0 0 5px #0000FF;
+}
+
+.dinhdanh1
+{
+    color: red;
+    font-weight: bold;
+}
+
+td
+{
+    background-color:aliceblue;
+    color: orangered;
+    font-weight: bold;
+    font-size: 25px;
+}
