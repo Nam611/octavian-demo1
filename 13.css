@@ -1,0 +1,87 @@
+.register {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://coolwallpapers.me/picsup/6013846-background-knowledge-wallpaper-book-mood-pages-book.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.form {
+    min-width: 420px;
+    background-color: rgba(255, 255, 255, 0.6);
+    /* background-color: #fff; */
+    border-radius: 11px;
+    padding: 24px;
+    -webkit-backdrop-filter: blur(3px);
+      backdrop-filter: blur(3px);
+}
+
+.form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-logo {
+    display: block;
+    text-align: center;
+}
+
+.form-logo > img {
+    width: 150px;
+}
+
+.form-title {
+    font-size: 19px;
+    text-align: center;
+    color: #a06582;
+    font-weight: 700;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    margin: 22px 0;
+}
+
+.form-label {
+    margin-bottom: 0 !important;
+    color: #333;
+    width: 80px;
+    cursor: pointer;
+}
+
+.form-input {
+    flex: 1;
+    outline: none;
+    border: 1px solid #999;
+    border-radius: 7px;
+    padding: 7px 10px;
+    margin-left: 10px;
+    transition: all ease 0.3s;
+}
+
+.form-input:focus {
+    border-color: #a06582;
+}
+
+.form-submit-btn {
+    margin-top: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    background-color: #a06582;
+    color: #fff;
+    transition: all ease 0.3s;
+}
+
+.form-submit-btn:hover {
+    opacity: 0.9;
+}
